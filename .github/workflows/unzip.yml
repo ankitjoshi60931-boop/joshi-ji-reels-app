@@ -1,0 +1,17 @@
+name: Unzip Project
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          unzip -o "joshi-ji-reels (1).zip"
+          cp -r "joshi-ji-reels (1)/." . || true
+          rm -rf "joshi-ji-reels (1).zip" "joshi-ji-reels (1)"
+          ls -la
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Unzipped project files
