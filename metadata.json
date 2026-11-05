@@ -1,0 +1,6 @@
+{
+  "name": "Joshi Ji Reels",
+  "description": "Short-video Reels platform featuring Joshi Ji creator content, AI audio transcription, viral script generation, and smart reel analytics.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
